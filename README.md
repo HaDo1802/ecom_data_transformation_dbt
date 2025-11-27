@@ -2,7 +2,7 @@
 
 This project implements a modern data engineering and analytics pipeline for E-commerce analytics, using the [Olist Brazil dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce/data?select=olist_order_items_dataset.csv). It demonstrates end-to-end transformation, modeling, and analysis workflows powered by dbt, PostgreSQL, and Python, enabling scalable, reproducible insights into E-commerce performance.
 
-The project is focusing on tranforming from OLTP to OLAP based on KimBall Stat-schema, so I did not complicate it by using Airflow or Python script for ETL, as the data source is static and not changing! So if you are looking for these tech stacks, please refer to my other projects!!!
+The project is focusing on tranforming from OLTP to OLAP based on KimBall Star-schema, so I did not complicate it by using Airflow or Python script for ETL, as the data source is not changing! So if you are looking for these tech stacks, please refer to my other projects!!!
 
 ## 🗂 Project Structure
 
@@ -11,7 +11,7 @@ The project is focusing on tranforming from OLTP to OLAP based on KimBall Stat-s
 ├── Data/                    
 │   ├── download_data.ipynb  # Notebook for downloading and extracting data
 │   ├── create_raw_schema/   # SQL scripts for schema creation and data load
-│   └── olist_*_dataset.csv  # CSV files (you can download this)                  
+│   └── olist_*_dataset.csv  # CSV files (you can download this to skip the loading step)                  
 ├── ecommerce_dbt/           # dbt project: staging, marts, seeds, snapshots, macros
 │   ├── dbt_project.yml
 │   └── models/
